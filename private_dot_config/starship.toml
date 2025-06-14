@@ -1,0 +1,65 @@
+format = '''
+$directory[](fg:base01 bg:base02)$git_branch$git_status[](fg:base02 bg:base03)$nodejs$rust[](fg:base03 bg:base04)$time[](fg:base04)
+$character
+'''
+
+palette = 'tokyo-mix'
+
+[palettes.tokyo-mix]
+base00 = '#171D23'
+base01 = '#1D252C'
+base02 = '#28323A'
+base03 = '#526270'
+base04 = '#B7C5D3'
+base05 = '#D8E2EC'
+base06 = '#F6F6F8'
+base07 = '#FBFBFD'
+base08 = '#C0CAF5'
+base09 = '#A9B1D6'
+base0A = '#0DB9D7'
+base0B = '#9ECE6A'
+base0C = '#B4F9F8'
+base0D = '#2AC3DE'
+base0E = '#BB9AF7'
+base0F = '#F7768E'
+
+[directory]
+style = 'fg:base06 bg:base01'
+format = '[ $path ]($style)'
+truncation_length = 3
+truncation_symbol = '.../'
+
+[git_branch]
+symbol = ''
+style = 'fg:base06 bg:base02'
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = 'fg:base06 bg:base01'
+format = '[[$all_status$ahead_behind](bg:base01)]($style)'
+staged = '[+$count ](fg:base06 bg:base02)'
+modified = '[!$count ](fg:base06 bg:base02)'
+deleted = '[-$count ](fg:base06 bg:base02)'
+untracked = '[?$count ](fg:base06 bg:base02)'
+conflicted = '[~$count ](fg:base06 bg:base02)'
+renamed = '[»$count ](fg:base06 bg:base02)'
+stashed = '[S$count ](fg:base06 bg:base02)'
+ahead = '[⇡$count ](fg:base06 bg:base02)'
+behind = '[⇣$count ](fg:base06 bg:base02)'
+diverged = '[⇕$count ](fg:base06 bg:base02)'
+
+[nodejs]
+symbol = ''
+style = 'bg:base02'
+format = '[[ $symbol ($version) ](fg:base06 bg:base03)]($style)'
+
+[rust]
+symbol = ''
+style = 'bg:#212736'
+format = '[[ $symbol ($version) ](fg:base06 bg:base03)]($style)'
+
+[time]
+style = 'fg:base01 bg:base04'
+disabled = false
+time_format = '%R'
+format = '[  $time ]($style)'
