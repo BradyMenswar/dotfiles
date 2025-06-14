@@ -1,5 +1,7 @@
 vim.lsp.enable({
-    "lua_ls"
+    "lua-ls",
+    "ts-ls",
+    "tailwind-ls"
 })
 
 vim.diagnostic.config({
