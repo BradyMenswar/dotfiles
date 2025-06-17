@@ -1,0 +1,3 @@
+data:
+  themeData: "{{ (include `theme.yaml`) | fromYaml }}"
+  theme: "{{ (include (print `themes/` .themeData.themeName `.yaml`)) | fromYaml }}"
