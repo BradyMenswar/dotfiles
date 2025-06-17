@@ -1,16 +1,32 @@
+local formatters = { "stylua", "prettier", "ruff" }
+local linters = {}
+local language_servers = {
+	"lua_ls",
+	"pyright",
+	"ts_ls",
+	"html",
+	"tailwindcss",
+	"angularls",
+}
+
+local allMasonPkgs = vim.iter({ language_servers, linters, formatters }):flatten():totable()
+
 return {
 	{
-		"williamboman/mason.nvim",
-		config = function()
-			require("mason").setup()
-		end,
+		"whoissethdaniel/mason-tool-installer.nvim",
+		dependencies = {
+			{ "williamboman/mason.nvim", opts = {} },
+		},
+		opts = { ensure_installed = allMasonPkgs },
 	},
+
 	{
 		"williamboman/mason-lspconfig.nvim",
-		config = function()
-			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "ts_ls", "angularls", "html", "tailwindcss" },
-			})
-		end,
+		dependencies = {
+			{
+				"neovim/nvim-lspconfig",
+			},
+		},
+		opts = {},
 	},
 }

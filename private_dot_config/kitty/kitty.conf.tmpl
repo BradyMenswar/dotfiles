@@ -1,0 +1,7 @@
+{{- $theme := (include (print "themes/" .themeName ".yaml") | fromYaml).palette -}}
+shell /bin/zsh
+font_size 14.0
+force_ltr no
+font_family JetBrainsMono Nerd Font
+foreground {{$theme.base06}}
+background {{$theme.base00}}
