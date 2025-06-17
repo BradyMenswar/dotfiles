@@ -5,6 +5,7 @@ local language_servers = {
 	"ts_ls",
 	"html",
 	"pyright",
+	"taplo",
 	"tailwindcss",
 	"angularls",
 	"yaml-language-server",
