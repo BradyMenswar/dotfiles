@@ -1,12 +1,13 @@
-local formatters = { "stylua", "prettier", "ruff" }
+local formatters = { "stylua", "prettier", "ruff", "isort" }
 local linters = {}
 local language_servers = {
 	"lua_ls",
-	"pyright",
 	"ts_ls",
 	"html",
+	"pyright",
 	"tailwindcss",
 	"angularls",
+	"yaml-language-server",
 }
 
 local allMasonPkgs = vim.iter({ language_servers, linters, formatters }):flatten():totable()
