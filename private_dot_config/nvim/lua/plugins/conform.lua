@@ -16,6 +16,7 @@ return {
 			html = { "prettier" },
 			css = { "prettier" },
 			scss = { "prettier" },
+			rust = { "rustfmt" },
 			python = { "isort", lsp_format="first" },
 		},
 		default_format_opts = {

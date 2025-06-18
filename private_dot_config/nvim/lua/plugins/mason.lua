@@ -4,6 +4,7 @@ local language_servers = {
 	"lua_ls",
 	"ts_ls",
 	"html",
+	"rust_analyzer",
 	"pyright",
 	"taplo",
 	"tailwindcss",

@@ -1,7 +1,11 @@
-{{- $theme := (include (print "themes/" .themeName ".yaml") | fromYaml).palette -}}
+{{- if eq .chezmoi.os "darwin"}}
 shell /bin/zsh
+{{- end }}
+{{- if eq .chezmoi.os "linux"}}
+shell /usr/bin/zsh
+{{- end }}
 font_size 14.0
 force_ltr no
 font_family JetBrainsMono Nerd Font
-foreground {{$theme.base06}}
-background {{$theme.base00}}
+foreground {{.cheztheme.base06}}
+background {{.cheztheme.base00}}
