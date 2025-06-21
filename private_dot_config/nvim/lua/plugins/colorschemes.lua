@@ -5,6 +5,11 @@ return {
 		local palette_path = vim.fn.stdpath("config") .. "/lua/colors/"
 		local apply = function()
 			require("base16-colorscheme").setup(require(custom_palette))
+			require("lualine").setup({
+				options = {
+					theme = "auto",
+				},
+			})
 		end
 
 		apply()
