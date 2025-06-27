@@ -108,6 +108,9 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias cat="bat"
 alias ls="eza"
+alias ct="cargo test"
+alias cb="cargo build"
+alias cr="cargo run"
 
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"

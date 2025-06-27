@@ -23,7 +23,6 @@ return {
 			-- Clear module and re-apply
 			package.loaded[custom_palette] = nil
 			apply()
-			vim.notify("base16 colorscheme reloaded (fs event)", vim.log.levels.INFO)
 		end
 		watcher:start(palette_path, {}, vim.schedule_wrap(reload))
 	end,
