@@ -114,4 +114,5 @@ alias cr="cargo run"
 
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
+eval "$(zellij)"
 
