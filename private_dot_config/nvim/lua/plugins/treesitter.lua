@@ -56,6 +56,8 @@ return {
                         ["il"] = { query = "@loop.inner", desc = "inner part of a loop" },
                         ["ap"] = { query = "@parameter.outer", desc = "around parameter" },
                         ["ip"] = { query = "@parameter.inner", desc = "inside a parameter" },
+                        ["ao"] = { query = "@object.outer", desc = "around object" },
+                        ["io"] = { query = "@object.inner", desc = "inside a object" },
                     },
                     selection_modes = {
                         ["@parameter.outer"] = "v",   -- charwise
