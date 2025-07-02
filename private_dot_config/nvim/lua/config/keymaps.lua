@@ -15,6 +15,8 @@ vim.keymap.set("n", "<leader>cc", function()
 		end
 	end)
 end, { desc = "Format code with null-ls" })
+vim.keymap.set("n", "<leader>n", "nzz", { desc = "Centered Next" })
+vim.keymap.set("n", "<leader>N", "Nzz", { desc = "Centered Prev" })
 vim.keymap.set("n", "<leader>t", ":tabnew<CR>", { desc = "New tab" })
 vim.keymap.set("n", "<leader>1", "1gt", { desc = "Switch to tab 1" })
 vim.keymap.set("n", "<leader>2", "2gt", { desc = "Switch to tab 2" })
