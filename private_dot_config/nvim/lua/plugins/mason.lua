@@ -10,6 +10,7 @@ local language_servers = {
 	"tailwindcss",
 	"angularls",
 	"yaml-language-server",
+	"emmet-language-server",
 }
 
 local allMasonPkgs = vim.iter({ language_servers, linters, formatters }):flatten():totable()

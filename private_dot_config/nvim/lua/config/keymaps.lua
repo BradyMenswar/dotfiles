@@ -6,9 +6,9 @@ vim.keymap.set({ "n", "v" }, "<C-k>", "<C-u>zz", { desc = "Move page up and cent
 vim.keymap.set("x", "<leader>p", '"_dP', { desc = "Paste without losing buffer" })
 vim.keymap.set({ "n", "v" }, "<leader>y", '"+y', { desc = "Copy to clipboard" })
 vim.keymap.set({ "n", "v" }, "<leader>d", '"_d', { desc = "Delete without losing buffer" })
-vim.keymap.set("n", "<leader>pv", ":Neotree toggle current<CR>", { desc = "Open Neotree directory view" })
 vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Show lsp info" })
 vim.keymap.set("n", "<leader>cc", function()
+	vim.cmd("TailwindSortSync")
 	require("conform").format({ async = true }, function(err, did_edit)
 		if not err and did_edit then
 			vim.notify("Code formatted", vim.log.levels.INFO, { title = "Conform" })
