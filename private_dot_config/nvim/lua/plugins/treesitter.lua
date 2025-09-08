@@ -21,7 +21,6 @@ return {
                 "bash",
                 "html",
                 "javascript",
-				"nunjucks",
                 "json",
                 "lua",
                 "luadoc",

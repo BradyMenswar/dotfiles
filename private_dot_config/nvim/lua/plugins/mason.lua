@@ -7,6 +7,7 @@ local language_servers = {
 	"rust_analyzer",
 	"pyright",
 	"taplo",
+	"djlint",
 	"tailwindcss",
 	"angularls",
 	"yaml-language-server",
