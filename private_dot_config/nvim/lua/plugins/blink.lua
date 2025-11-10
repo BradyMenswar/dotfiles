@@ -25,13 +25,13 @@ return {
                 keymap = {
                     ["<C-k>"] = {"select_prev", "snippet_backward", "fallback"},
                     ["<C-j>"] = {"select_next", "snippet_forward", "fallback"},
-                    ["<CR>"] = {"accept", "fallback"},
+                    ["<Tab>"] = {"accept", "fallback"},
                 },
                 cmdline = {
                     enabled = false,
                     completion = { menu = { auto_show = true } },
                     keymap = {
-                        ["<CR>"] = { "accept_and_enter", "fallback" },
+                        ["<Tab>"] = { "accept_and_enter", "fallback" },
                     },
                 },
                 completion = {
