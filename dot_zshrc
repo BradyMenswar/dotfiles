@@ -127,3 +127,10 @@ source <(ng completion script)
 
 # opencode
 export PATH=/Users/bradymenswar/.opencode/bin:$PATH
+
+# bun completions
+[ -s "/Users/bradymenswar/.bun/_bun" ] && source "/Users/bradymenswar/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
