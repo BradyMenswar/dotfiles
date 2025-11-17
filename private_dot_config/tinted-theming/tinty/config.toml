@@ -1,0 +1,5 @@
+shell = "zsh -c '{}'"
+default-scheme = "base16-nord"
+hooks = [
+	"chezmoi apply"
+]
