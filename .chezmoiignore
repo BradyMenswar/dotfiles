@@ -3,7 +3,7 @@
 Library/
 {{ end }}
 
-{{ if ne .chezmoi.os "linux" }}
+{{ if eq .chezmoi.os "windows" }}
 .config/
 {{ end }}
 
