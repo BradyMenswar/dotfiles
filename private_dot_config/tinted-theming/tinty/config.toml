@@ -1,0 +1,9 @@
+shell = "zsh -c '{}'"
+default-scheme = "base16-tokyo-mix"
+
+[[items]]
+name = "chezmoi-toml"
+path = "https://github.com/tinted-theming/tinted-shell"
+themes-dir = "scripts"
+hook = "~/.local/share/chezmoi/chezmoi-hook.sh && chezmoi apply"
+supported-systems = ["base16", "base24"]

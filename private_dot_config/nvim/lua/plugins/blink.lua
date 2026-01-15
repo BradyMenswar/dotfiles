@@ -2,6 +2,7 @@ return {
     { "L3MON4D3/LuaSnip", keys = {} },
     {
         "saghen/blink.cmp",
+		enabled = not vim.g.vscode,
         dependencies = {
             "rafamadriz/friendly-snippets",
         },
