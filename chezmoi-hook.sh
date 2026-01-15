@@ -76,7 +76,6 @@ main() {
         generate_cheztheme > "$CHEZMOI_CONFIG"
     fi
 
-    echo "Updated $CHEZMOI_CONFIG with theme: $TINTY_SCHEME_SLUG"
 }
 
 main
