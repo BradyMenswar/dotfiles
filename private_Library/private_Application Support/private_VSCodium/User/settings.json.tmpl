@@ -25,5 +25,417 @@
   "diffEditor.renderSideBySide": false,
   "rust-analyzer.inlayHints.chainingHints.enable": false,
   "rust-analyzer.inlayHints.typeHints.enable": false,
-  "workbench.colorTheme": "base16-{{.cheztheme.themeName}}"
+  "workbench.colorCustomizations": {
+    // Base UI
+    "editor.background": "{{ .cheztheme.base00 }}",
+    "editor.foreground": "{{ .cheztheme.base05 }}",
+    "editorCursor.foreground": "{{ .cheztheme.base05 }}",
+    "editorLineNumber.foreground": "{{ .cheztheme.base03 }}",
+    "editorLineNumber.activeForeground": "{{ .cheztheme.base04 }}",
+    "editor.selectionBackground": "{{ .cheztheme.base02 }}",
+    "editor.selectionHighlightBackground": "{{ .cheztheme.base02 }}",
+    "editor.wordHighlightBackground": "{{ .cheztheme.base02 }}",
+    "editor.wordHighlightStrongBackground": "{{ .cheztheme.base02 }}",
+    "editor.findMatchBackground": "{{ .cheztheme.base0A }}40",
+    "editor.findMatchHighlightBackground": "{{ .cheztheme.base0A }}25",
+    "editor.lineHighlightBackground": "{{ .cheztheme.base01 }}",
+    "editorWhitespace.foreground": "{{ .cheztheme.base02 }}",
+    "editorIndentGuide.background1": "{{ .cheztheme.base02 }}",
+    "editorIndentGuide.activeBackground1": "{{ .cheztheme.base03 }}",
+    "editorRuler.foreground": "{{ .cheztheme.base02 }}",
+    "editorBracketMatch.background": "{{ .cheztheme.base02 }}",
+    "editorBracketMatch.border": "{{ .cheztheme.base03 }}",
+
+    // Gutter
+    "editorGutter.background": "{{ .cheztheme.base00 }}",
+    "editorGutter.addedBackground": "{{ .cheztheme.base0B }}",
+    "editorGutter.modifiedBackground": "{{ .cheztheme.base0A }}",
+    "editorGutter.deletedBackground": "{{ .cheztheme.base0F }}",
+
+    // Sidebar
+    "sideBar.background": "{{ .cheztheme.base01 }}",
+    "sideBar.foreground": "{{ .cheztheme.base05 }}",
+    "sideBar.border": "{{ .cheztheme.base02 }}",
+    "sideBarTitle.foreground": "{{ .cheztheme.base05 }}",
+    "sideBarSectionHeader.background": "{{ .cheztheme.base01 }}",
+    "sideBarSectionHeader.foreground": "{{ .cheztheme.base05 }}",
+    "sideBarSectionHeader.border": "{{ .cheztheme.base02 }}",
+
+    // Lists (sidebar, command palette, etc.)
+    "list.activeSelectionBackground": "{{ .cheztheme.base02 }}",
+    "list.activeSelectionForeground": "{{ .cheztheme.base05 }}",
+    "list.inactiveSelectionBackground": "{{ .cheztheme.base01 }}",
+    "list.inactiveSelectionForeground": "{{ .cheztheme.base05 }}",
+    "list.hoverBackground": "{{ .cheztheme.base02 }}",
+    "list.hoverForeground": "{{ .cheztheme.base05 }}",
+    "list.focusBackground": "{{ .cheztheme.base02 }}",
+    "list.focusForeground": "{{ .cheztheme.base05 }}",
+    "list.highlightForeground": "{{ .cheztheme.base0D }}",
+    "list.errorForeground": "{{ .cheztheme.base0F }}",
+    "list.warningForeground": "{{ .cheztheme.base0A }}",
+
+    // Activity Bar
+    "activityBar.background": "{{ .cheztheme.base00 }}",
+    "activityBar.foreground": "{{ .cheztheme.base05 }}",
+    "activityBar.inactiveForeground": "{{ .cheztheme.base03 }}",
+    "activityBar.border": "{{ .cheztheme.base02 }}",
+    "activityBarBadge.background": "{{ .cheztheme.base0D }}",
+    "activityBarBadge.foreground": "{{ .cheztheme.base00 }}",
+
+    // Title Bar
+    "titleBar.activeBackground": "{{ .cheztheme.base00 }}",
+    "titleBar.activeForeground": "{{ .cheztheme.base05 }}",
+    "titleBar.inactiveBackground": "{{ .cheztheme.base00 }}",
+    "titleBar.inactiveForeground": "{{ .cheztheme.base03 }}",
+    "titleBar.border": "{{ .cheztheme.base02 }}",
+
+    // Tabs
+    "editorGroupHeader.tabsBackground": "{{ .cheztheme.base00 }}",
+    "editorGroupHeader.tabsBorder": "{{ .cheztheme.base02 }}",
+    "tab.activeBackground": "{{ .cheztheme.base01 }}",
+    "tab.activeForeground": "{{ .cheztheme.base05 }}",
+    "tab.activeBorder": "{{ .cheztheme.base0D }}",
+    "tab.inactiveBackground": "{{ .cheztheme.base00 }}",
+    "tab.inactiveForeground": "{{ .cheztheme.base03 }}",
+    "tab.border": "{{ .cheztheme.base02 }}",
+    "tab.hoverBackground": "{{ .cheztheme.base01 }}",
+
+    // Status Bar
+    "statusBar.background": "{{ .cheztheme.base01 }}",
+    "statusBar.foreground": "{{ .cheztheme.base05 }}",
+    "statusBar.border": "{{ .cheztheme.base02 }}",
+    "statusBar.debuggingBackground": "{{ .cheztheme.base0F }}",
+    "statusBar.debuggingForeground": "{{ .cheztheme.base00 }}",
+    "statusBar.noFolderBackground": "{{ .cheztheme.base01 }}",
+    "statusBar.noFolderForeground": "{{ .cheztheme.base05 }}",
+    "statusBarItem.hoverBackground": "{{ .cheztheme.base02 }}",
+    "statusBarItem.remoteBackground": "{{ .cheztheme.base0D }}",
+    "statusBarItem.remoteForeground": "{{ .cheztheme.base00 }}",
+
+    // Panel (terminal, output, etc.)
+    "panel.background": "{{ .cheztheme.base00 }}",
+    "panel.border": "{{ .cheztheme.base02 }}",
+    "panelTitle.activeBorder": "{{ .cheztheme.base0D }}",
+    "panelTitle.activeForeground": "{{ .cheztheme.base05 }}",
+    "panelTitle.inactiveForeground": "{{ .cheztheme.base03 }}",
+
+    // Terminal
+    "terminal.background": "{{ .cheztheme.base00 }}",
+    "terminal.foreground": "{{ .cheztheme.base05 }}",
+    "terminal.ansiBlack": "{{ .cheztheme.base00 }}",
+    "terminal.ansiRed": "{{ .cheztheme.base0F }}",
+    "terminal.ansiGreen": "{{ .cheztheme.base0B }}",
+    "terminal.ansiYellow": "{{ .cheztheme.base0A }}",
+    "terminal.ansiBlue": "{{ .cheztheme.base0D }}",
+    "terminal.ansiMagenta": "{{ .cheztheme.base0E }}",
+    "terminal.ansiCyan": "{{ .cheztheme.base0C }}",
+    "terminal.ansiWhite": "{{ .cheztheme.base05 }}",
+    "terminal.ansiBrightBlack": "{{ .cheztheme.base03 }}",
+    "terminal.ansiBrightRed": "{{ .cheztheme.base0F }}",
+    "terminal.ansiBrightGreen": "{{ .cheztheme.base0B }}",
+    "terminal.ansiBrightYellow": "{{ .cheztheme.base0A }}",
+    "terminal.ansiBrightBlue": "{{ .cheztheme.base0D }}",
+    "terminal.ansiBrightMagenta": "{{ .cheztheme.base0E }}",
+    "terminal.ansiBrightCyan": "{{ .cheztheme.base0C }}",
+    "terminal.ansiBrightWhite": "{{ .cheztheme.base07 }}",
+    "terminalCursor.foreground": "{{ .cheztheme.base05 }}",
+
+    // Input controls
+    "input.background": "{{ .cheztheme.base01 }}",
+    "input.foreground": "{{ .cheztheme.base05 }}",
+    "input.border": "{{ .cheztheme.base02 }}",
+    "input.placeholderForeground": "{{ .cheztheme.base03 }}",
+    "inputOption.activeBackground": "{{ .cheztheme.base02 }}",
+    "inputOption.activeBorder": "{{ .cheztheme.base0D }}",
+    "inputValidation.errorBackground": "{{ .cheztheme.base01 }}",
+    "inputValidation.errorBorder": "{{ .cheztheme.base0F }}",
+    "inputValidation.warningBackground": "{{ .cheztheme.base01 }}",
+    "inputValidation.warningBorder": "{{ .cheztheme.base0A }}",
+    "inputValidation.infoBackground": "{{ .cheztheme.base01 }}",
+    "inputValidation.infoBorder": "{{ .cheztheme.base0D }}",
+
+    // Dropdowns
+    "dropdown.background": "{{ .cheztheme.base01 }}",
+    "dropdown.foreground": "{{ .cheztheme.base05 }}",
+    "dropdown.border": "{{ .cheztheme.base02 }}",
+    "dropdown.listBackground": "{{ .cheztheme.base01 }}",
+
+    // Buttons
+    "button.background": "{{ .cheztheme.base0D }}",
+    "button.foreground": "{{ .cheztheme.base00 }}",
+    "button.hoverBackground": "{{ .cheztheme.base0C }}",
+    "button.secondaryBackground": "{{ .cheztheme.base02 }}",
+    "button.secondaryForeground": "{{ .cheztheme.base05 }}",
+    "button.secondaryHoverBackground": "{{ .cheztheme.base03 }}",
+
+    // Badges
+    "badge.background": "{{ .cheztheme.base0D }}",
+    "badge.foreground": "{{ .cheztheme.base00 }}",
+
+    // Scrollbar
+    "scrollbar.shadow": "{{ .cheztheme.base00 }}",
+    "scrollbarSlider.background": "{{ .cheztheme.base02 }}80",
+    "scrollbarSlider.hoverBackground": "{{ .cheztheme.base03 }}80",
+    "scrollbarSlider.activeBackground": "{{ .cheztheme.base03 }}",
+
+    // Progress bar
+    "progressBar.background": "{{ .cheztheme.base0D }}",
+
+    // Widgets (find/replace, command palette)
+    "editorWidget.background": "{{ .cheztheme.base01 }}",
+    "editorWidget.foreground": "{{ .cheztheme.base05 }}",
+    "editorWidget.border": "{{ .cheztheme.base02 }}",
+    "editorSuggestWidget.background": "{{ .cheztheme.base01 }}",
+    "editorSuggestWidget.foreground": "{{ .cheztheme.base05 }}",
+    "editorSuggestWidget.border": "{{ .cheztheme.base02 }}",
+    "editorSuggestWidget.highlightForeground": "{{ .cheztheme.base0D }}",
+    "editorSuggestWidget.selectedBackground": "{{ .cheztheme.base02 }}",
+    "editorHoverWidget.background": "{{ .cheztheme.base01 }}",
+    "editorHoverWidget.border": "{{ .cheztheme.base02 }}",
+
+    // Peek view
+    "peekView.border": "{{ .cheztheme.base0D }}",
+    "peekViewEditor.background": "{{ .cheztheme.base01 }}",
+    "peekViewEditor.matchHighlightBackground": "{{ .cheztheme.base0A }}40",
+    "peekViewResult.background": "{{ .cheztheme.base00 }}",
+    "peekViewResult.fileForeground": "{{ .cheztheme.base05 }}",
+    "peekViewResult.lineForeground": "{{ .cheztheme.base04 }}",
+    "peekViewResult.matchHighlightBackground": "{{ .cheztheme.base0A }}40",
+    "peekViewResult.selectionBackground": "{{ .cheztheme.base02 }}",
+    "peekViewResult.selectionForeground": "{{ .cheztheme.base05 }}",
+    "peekViewTitle.background": "{{ .cheztheme.base01 }}",
+    "peekViewTitleDescription.foreground": "{{ .cheztheme.base04 }}",
+    "peekViewTitleLabel.foreground": "{{ .cheztheme.base05 }}",
+
+    // Diff editor
+    "diffEditor.insertedTextBackground": "{{ .cheztheme.base0B }}20",
+    "diffEditor.removedTextBackground": "{{ .cheztheme.base0F }}20",
+    "diffEditor.diagonalFill": "{{ .cheztheme.base02 }}",
+
+    // Merge conflicts
+    "merge.currentHeaderBackground": "{{ .cheztheme.base0B }}40",
+    "merge.currentContentBackground": "{{ .cheztheme.base0B }}20",
+    "merge.incomingHeaderBackground": "{{ .cheztheme.base0D }}40",
+    "merge.incomingContentBackground": "{{ .cheztheme.base0D }}20",
+
+    // Git decorations
+    "gitDecoration.addedResourceForeground": "{{ .cheztheme.base0B }}",
+    "gitDecoration.modifiedResourceForeground": "{{ .cheztheme.base0A }}",
+    "gitDecoration.deletedResourceForeground": "{{ .cheztheme.base0F }}",
+    "gitDecoration.untrackedResourceForeground": "{{ .cheztheme.base0B }}",
+    "gitDecoration.ignoredResourceForeground": "{{ .cheztheme.base03 }}",
+    "gitDecoration.conflictingResourceForeground": "{{ .cheztheme.base0F }}",
+
+    // Breadcrumbs
+    "breadcrumb.foreground": "{{ .cheztheme.base04 }}",
+    "breadcrumb.focusForeground": "{{ .cheztheme.base05 }}",
+    "breadcrumb.activeSelectionForeground": "{{ .cheztheme.base05 }}",
+    "breadcrumbPicker.background": "{{ .cheztheme.base01 }}",
+
+    // Minimap
+    "minimap.findMatchHighlight": "{{ .cheztheme.base0A }}",
+    "minimap.selectionHighlight": "{{ .cheztheme.base02 }}",
+    "minimap.errorHighlight": "{{ .cheztheme.base0F }}",
+    "minimap.warningHighlight": "{{ .cheztheme.base0A }}",
+    "minimapGutter.addedBackground": "{{ .cheztheme.base0B }}",
+    "minimapGutter.modifiedBackground": "{{ .cheztheme.base0A }}",
+    "minimapGutter.deletedBackground": "{{ .cheztheme.base0F }}",
+
+    // Notifications
+    "notificationCenter.border": "{{ .cheztheme.base02 }}",
+    "notificationCenterHeader.background": "{{ .cheztheme.base01 }}",
+    "notificationCenterHeader.foreground": "{{ .cheztheme.base05 }}",
+    "notifications.background": "{{ .cheztheme.base01 }}",
+    "notifications.foreground": "{{ .cheztheme.base05 }}",
+    "notifications.border": "{{ .cheztheme.base02 }}",
+    "notificationLink.foreground": "{{ .cheztheme.base0D }}",
+
+    // Quick picker
+    "quickInput.background": "{{ .cheztheme.base01 }}",
+    "quickInput.foreground": "{{ .cheztheme.base05 }}",
+    "quickInputTitle.background": "{{ .cheztheme.base01 }}",
+    "pickerGroup.border": "{{ .cheztheme.base02 }}",
+    "pickerGroup.foreground": "{{ .cheztheme.base0D }}",
+
+    // Keybinding
+    "keybindingLabel.background": "{{ .cheztheme.base02 }}",
+    "keybindingLabel.foreground": "{{ .cheztheme.base05 }}",
+    "keybindingLabel.border": "{{ .cheztheme.base03 }}",
+    "keybindingLabel.bottomBorder": "{{ .cheztheme.base03 }}",
+
+    // Debug
+    "debugToolBar.background": "{{ .cheztheme.base01 }}",
+    "debugToolBar.border": "{{ .cheztheme.base02 }}",
+    "debugExceptionWidget.background": "{{ .cheztheme.base01 }}",
+    "debugExceptionWidget.border": "{{ .cheztheme.base0F }}",
+
+    // Welcome page
+    "welcomePage.background": "{{ .cheztheme.base00 }}",
+    "welcomePage.tileBackground": "{{ .cheztheme.base01 }}",
+    "welcomePage.tileHoverBackground": "{{ .cheztheme.base02 }}",
+    "walkThrough.embeddedEditorBackground": "{{ .cheztheme.base01 }}",
+
+    // Settings
+    "settings.headerForeground": "{{ .cheztheme.base05 }}",
+    "settings.modifiedItemIndicator": "{{ .cheztheme.base0D }}",
+    "settings.dropdownBackground": "{{ .cheztheme.base01 }}",
+    "settings.dropdownForeground": "{{ .cheztheme.base05 }}",
+    "settings.dropdownBorder": "{{ .cheztheme.base02 }}",
+    "settings.checkboxBackground": "{{ .cheztheme.base01 }}",
+    "settings.checkboxForeground": "{{ .cheztheme.base05 }}",
+    "settings.checkboxBorder": "{{ .cheztheme.base02 }}",
+    "settings.textInputBackground": "{{ .cheztheme.base01 }}",
+    "settings.textInputForeground": "{{ .cheztheme.base05 }}",
+    "settings.textInputBorder": "{{ .cheztheme.base02 }}",
+    "settings.numberInputBackground": "{{ .cheztheme.base01 }}",
+    "settings.numberInputForeground": "{{ .cheztheme.base05 }}",
+    "settings.numberInputBorder": "{{ .cheztheme.base02 }}"
+  },
+  "editor.tokenColorCustomizations": {
+    "comments": "{{ .cheztheme.base03 }}",
+    "strings": "{{ .cheztheme.base0B }}",
+    "keywords": "{{ .cheztheme.base0E }}",
+    "numbers": "{{ .cheztheme.base09 }}",
+    "types": "{{ .cheztheme.base0A }}",
+    "functions": "{{ .cheztheme.base0D }}",
+    "variables": "{{ .cheztheme.base08 }}",
+    "textMateRules": [
+      {
+        "scope": ["comment", "punctuation.definition.comment"],
+        "settings": { "foreground": "{{ .cheztheme.base03 }}", "fontStyle": "italic" }
+      },
+      {
+        "scope": ["string", "string.quoted", "string.template"],
+        "settings": { "foreground": "{{ .cheztheme.base0B }}" }
+      },
+      {
+        "scope": ["constant.numeric", "constant.language.boolean"],
+        "settings": { "foreground": "{{ .cheztheme.base09 }}" }
+      },
+      {
+        "scope": ["constant.language", "constant.character", "constant.other"],
+        "settings": { "foreground": "{{ .cheztheme.base09 }}" }
+      },
+      {
+        "scope": ["keyword", "keyword.control", "keyword.operator.new"],
+        "settings": { "foreground": "{{ .cheztheme.base0E }}" }
+      },
+      {
+        "scope": ["keyword.operator", "keyword.operator.assignment", "keyword.operator.arithmetic"],
+        "settings": { "foreground": "{{ .cheztheme.base05 }}" }
+      },
+      {
+        "scope": ["storage", "storage.type", "storage.modifier"],
+        "settings": { "foreground": "{{ .cheztheme.base0E }}" }
+      },
+      {
+        "scope": ["entity.name.type", "entity.name.class", "entity.name.struct"],
+        "settings": { "foreground": "{{ .cheztheme.base0A }}" }
+      },
+      {
+        "scope": ["entity.name.function", "support.function", "meta.function-call"],
+        "settings": { "foreground": "{{ .cheztheme.base0D }}" }
+      },
+      {
+        "scope": ["entity.name.tag"],
+        "settings": { "foreground": "{{ .cheztheme.base0F }}" }
+      },
+      {
+        "scope": ["entity.other.attribute-name"],
+        "settings": { "foreground": "{{ .cheztheme.base0A }}" }
+      },
+      {
+        "scope": ["variable", "variable.other", "variable.parameter"],
+        "settings": { "foreground": "{{ .cheztheme.base08 }}" }
+      },
+      {
+        "scope": ["variable.language"],
+        "settings": { "foreground": "{{ .cheztheme.base0F }}", "fontStyle": "italic" }
+      },
+      {
+        "scope": ["support.type", "support.class"],
+        "settings": { "foreground": "{{ .cheztheme.base0A }}" }
+      },
+      {
+        "scope": ["support.constant"],
+        "settings": { "foreground": "{{ .cheztheme.base09 }}" }
+      },
+      {
+        "scope": ["support.variable"],
+        "settings": { "foreground": "{{ .cheztheme.base08 }}" }
+      },
+      {
+        "scope": ["punctuation"],
+        "settings": { "foreground": "{{ .cheztheme.base05 }}" }
+      },
+      {
+        "scope": ["punctuation.definition.string"],
+        "settings": { "foreground": "{{ .cheztheme.base0B }}" }
+      },
+      {
+        "scope": ["meta.brace", "punctuation.definition.block", "punctuation.section"],
+        "settings": { "foreground": "{{ .cheztheme.base05 }}" }
+      },
+      {
+        "scope": ["entity.other.inherited-class"],
+        "settings": { "foreground": "{{ .cheztheme.base0C }}" }
+      },
+      {
+        "scope": ["meta.decorator", "entity.name.function.decorator"],
+        "settings": { "foreground": "{{ .cheztheme.base0A }}" }
+      },
+      {
+        "scope": ["invalid", "invalid.illegal"],
+        "settings": { "foreground": "{{ .cheztheme.base0F }}" }
+      },
+      {
+        "scope": ["invalid.deprecated"],
+        "settings": { "foreground": "{{ .cheztheme.base0F }}", "fontStyle": "strikethrough" }
+      },
+      {
+        "scope": ["markup.heading"],
+        "settings": { "foreground": "{{ .cheztheme.base0D }}", "fontStyle": "bold" }
+      },
+      {
+        "scope": ["markup.bold"],
+        "settings": { "foreground": "{{ .cheztheme.base0A }}", "fontStyle": "bold" }
+      },
+      {
+        "scope": ["markup.italic"],
+        "settings": { "foreground": "{{ .cheztheme.base0E }}", "fontStyle": "italic" }
+      },
+      {
+        "scope": ["markup.underline"],
+        "settings": { "fontStyle": "underline" }
+      },
+      {
+        "scope": ["markup.inline.raw", "markup.fenced_code", "markup.raw"],
+        "settings": { "foreground": "{{ .cheztheme.base0B }}" }
+      },
+      {
+        "scope": ["markup.quote"],
+        "settings": { "foreground": "{{ .cheztheme.base0C }}", "fontStyle": "italic" }
+      },
+      {
+        "scope": ["markup.list"],
+        "settings": { "foreground": "{{ .cheztheme.base0F }}" }
+      },
+      {
+        "scope": ["markup.inserted"],
+        "settings": { "foreground": "{{ .cheztheme.base0B }}" }
+      },
+      {
+        "scope": ["markup.deleted"],
+        "settings": { "foreground": "{{ .cheztheme.base0F }}" }
+      },
+      {
+        "scope": ["markup.changed"],
+        "settings": { "foreground": "{{ .cheztheme.base0A }}" }
+      },
+      {
+        "scope": ["meta.embedded", "source.groovy.embedded"],
+        "settings": { "foreground": "{{ .cheztheme.base05 }}" }
+      }
+    ]
+  }
 }
