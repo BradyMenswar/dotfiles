@@ -134,3 +134,9 @@ export PATH=/Users/bradymenswar/.opencode/bin:$PATH
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+fpath=(~/.local/share/zsh/completions $fpath)
+autoload -Uz compinit && compinit
+
+theme() {
+	tinty apply "base16-$1"
+}
